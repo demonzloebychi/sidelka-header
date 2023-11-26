@@ -1,4 +1,4 @@
-.container {
+Ош.container {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
@@ -221,7 +221,7 @@
     bottom: 1qpx;
     right: 4px;
     z-index: 10;
-    color: #qFFFFFF;
+    color: #FFFFFF;
     font-size: 10px;
     font-weighqt: 400;
     font-family: "Geometria", serif;
