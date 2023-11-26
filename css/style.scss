@@ -128,8 +128,8 @@ __________________________________
     display: flex;
     justify-content: start;
     gap: 20px;
+    flex-wrap: wrap; 
 
-    flex-wrap: wrap;
 }
 
 .menu__link {
@@ -189,7 +189,6 @@ __________________________________
     border-radius: 5px;
     background-color: #fff;
 
-
 }
 .sub-sub-menu__list>li{
 
@@ -217,6 +216,7 @@ __________________________________
     height: 1px;
     background-color: #E74C3C;
     z-index: 20;
+    transition: all 0.3s ease 0s;
 }
 .arrow::before{
     transform: rotate(40deg);
@@ -312,8 +312,7 @@ __________________________________
     .burger__text{
         position: absolute;
         bottom: 1px;
-        left: 15%;
-        right: 15%;
+        left: 4px;
         z-index: 10;
         color: #FFFFFF;
         font-size: 10px;
