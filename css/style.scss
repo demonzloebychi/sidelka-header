@@ -59,6 +59,7 @@
 
 .header-top__logo {
     display: block;
+    z-index: 5;
     img{
         // max-width: 285px;
         width: clamp(95px, 30vw, 285px);
@@ -125,7 +126,6 @@ __________________________________
 
 .menu__list {
     display: flex;
-    // justify-content: space-between;
     justify-content: start;
     gap: 20px;
 
@@ -153,8 +153,8 @@ __________________________________
     padding: 20px 0 0 0;
     margin: 20px 0 0 0;
     min-width: 200px;
-    background-color: green;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 
@@ -185,10 +185,10 @@ __________________________________
     top: 0;
     left: 100%;
     min-width: 200px;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 15px;
     border-radius: 5px;
+    background-color: #fff;
 
-    background-color: rgb(0, 182, 0);
 
 }
 .sub-sub-menu__list>li{
@@ -199,25 +199,46 @@ __________________________________
     color: #000;
     display: inline-block;
     padding: 5px 10px;
-    font-size: 17px;
+    font-size: 16px;
 
 }
 
 
-.arrow {
+
+
+
+.arrow::before,
+.arrow::after {
     position: absolute;
     right: 0;
     top: 10px;
-    width: 0px;
-    height: 0px;
-    border-top: 10px solid #000;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent;
+    content: " ";
+    width: 7.5px;
+    height: 1px;
+    background-color: #E74C3C;
     z-index: 20;
 }
-.arrow.active{
-    transform: rotate(180deg);
+.arrow::before{
+    transform: rotate(40deg);
+    right: 6px;
 }
+.arrow::after{
+    transform: rotate(-40deg);
+    right: 0;
+}
+
+
+.arrow.active::before{
+    transform: rotate(-40deg);
+}
+.arrow.active::after{
+    transform: rotate(40deg);
+}
+
+
+
+
+
 .menu__arrow {
 }
 .sub-menu__arrow{
@@ -234,6 +255,7 @@ __________________________________
     display: block;
 }
 .sub-sub-menu__list.open{
+    padding-left: 10px;
     display: block;
 }
 
@@ -270,6 +292,7 @@ __________________________________
 @media (max-width:768px){
     .btn-mobile {
         display: block;
+        z-index: 5;
     }
     .btn-pc{
         display: none;
@@ -277,7 +300,6 @@ __________________________________
     .header-top__btns{
         flex-direction: row;
     }
-
     .burger{
         display: block;
         background-color: #547529;
@@ -290,6 +312,7 @@ __________________________________
     .burger__text{
         position: absolute;
         bottom: 1px;
+        left: 15%;
         right: 15%;
         z-index: 10;
         color: #FFFFFF;
@@ -343,16 +366,17 @@ __________________________________
         overflow: auto;
         top: -120%;
         left: 0;
-        padding: 0 20px;
+        padding: 20px 20px;
         width: 100%;
         height: 100%;
         align-items: center;
         transition: all 0.3s ease 0s;
         background-color: #fff;
-        // background-color: transparent;
     }
     .menu.active{
-        top: 290px;
+        top: 250px;
+        border-top: 1px solid #000;
+
     }
 
 
@@ -361,7 +385,6 @@ __________________________________
 .hide-menu{
     display: flex;
     align-items: center;
-    // gap: 50px;
     gap: clamp(10px, 1.8vw, 60px);
 }
 @media (max-width:768px) {
@@ -371,18 +394,19 @@ __________________________________
         overflow: auto;
         top: -160%;
         left: 0;
-        padding: 0 20px;
-        // width: 100%;
-        // height: 100%;
+        padding: 80px 20px;
+        width: 100%;
+        height: 100%;
         align-items: center;
         transition: all 0.3s ease 0s;
-        // background-color: #fff;
-        background-color: transparent;
+        background-color: #fff;
+
+
         >div{
             padding-bottom: 10px;
         }
     }
     .hide-menu.show{
-        top: 100px;
+        top: 0px;
     }
 }
