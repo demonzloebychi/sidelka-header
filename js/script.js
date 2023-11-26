@@ -1,5 +1,7 @@
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
+const hideMenu = document.querySelector('.hide-menu');
+// const menuMob2 = document.querySelector('.open-mobile-menu-2');
 // const link = document.querySelector('.header-main__item')
 
 
@@ -8,6 +10,9 @@ if (burger){
         document.body.classList.toggle('lock');
         burger.classList.toggle('active');
         menu.classList.toggle('active');
+        hideMenu.classList.toggle('show');
+        // menuMob2.classList.toggle('active');
+        // menuMob3.classList.toggle('active');
     });
 
     // menu.querySelectorAll('.header-main__item').forEach(link => {
