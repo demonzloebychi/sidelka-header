@@ -1,14 +1,15 @@
 const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
+// const menu = document.querySelector('.menu');
 const hideMenu = document.querySelector('.hide-menu');
+
 
 
 if (burger){
     burger.addEventListener("click", function(e){
         document.body.classList.toggle('lock');
         burger.classList.toggle('active');
-        menu.classList.toggle('active');
-        hideMenu.classList.toggle('show');
+        // menu.classList.toggle('active');
+        hideMenu.classList.toggle('active');
     });
     
 }
